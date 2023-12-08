@@ -584,8 +584,8 @@ void supertank_attack(edict_t *self)
 		SP_monster_soldier(ent);
 	}
 	else if (monsterKillCount < 10) {
-		ent->classname = "monster_soldier_ss";
-		SP_monster_soldier_ss(ent);
+		ent->classname = "monster_flyer";
+		SP_monster_flyer(ent);
 	}
 }
 

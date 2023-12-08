@@ -1,11 +1,33 @@
-﻿  m_supertank.c
+﻿  g_combat.c
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_combat.c(370,51): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_combat.c(370,36): warning C4100: 'targ': unreferenced formal parameter
+  m_flyer.c
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(52,43): warning C4100: 'other': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(531,65): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(531,55): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(531,42): warning C4100: 'other': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(564,89): warning C4100: 'point': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(564,74): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(564,60): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_flyer.c(564,40): warning C4100: 'inflictor': unreferenced formal parameter
+  m_soldier.c
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_soldier.c(409,67): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_soldier.c(409,57): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_soldier.c(409,44): warning C4100: 'other': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_soldier.c(792,44): warning C4100: 'other': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_soldier.c(1144,63): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_soldier.c(1144,43): warning C4100: 'inflictor': unreferenced formal parameter
+  m_supertank.c
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(452,59): warning C4100: 'kick': unreferenced formal parameter
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(452,46): warning C4100: 'other': unreferenced formal parameter
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(584,3): warning C4013: 'SP_monster_soldier' undefined; assuming extern returning int
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(588,3): warning C4013: 'SP_monster_soldier_ss' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(588,3): warning C4013: 'SP_monster_flyer' undefined; assuming extern returning int
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(671,94): warning C4100: 'point': unreferenced formal parameter
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(671,79): warning C4100: 'damage': unreferenced formal parameter
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(671,65): warning C4100: 'attacker': unreferenced formal parameter
 C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(671,45): warning C4100: 'inflictor': unreferenced formal parameter
+  Generating Code...
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_combat.c(249): warning C4701: potentially uninitialized local variable 'index' used
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_combat.c(209): warning C4701: potentially uninitialized local variable 'power' used
      Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp
   game.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 2\q2mod\gamex86.dll
