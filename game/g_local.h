@@ -1111,3 +1111,4 @@ struct edict_s
 	monsterinfo_t	monsterinfo;
 };
 
+extern int monsterKillCount;

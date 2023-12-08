@@ -499,6 +499,10 @@ void T_Damage (edict_t *targ, edict_t *inflictor, edict_t *attacker, vec3_t dir,
 			if ((targ->svflags & SVF_MONSTER) || (client))
 				targ->flags |= FL_NO_KNOCKBACK;
 			Killed (targ, inflictor, attacker, take, point);
+			monsterKillCount++;
+			if ((targ->svflags & SVF_MONSTER) || (attacker->client)) {
+				gi.dprintf("MonsterKillCount in If Statement: %d\n", monsterKillCount);
+			}
 			return;
 		}
 	}

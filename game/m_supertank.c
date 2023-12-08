@@ -514,7 +514,7 @@ void supertankRocket (edict_t *self)
 	VectorSubtract (vec, start, dir);
 	VectorNormalize (dir);
 
-	monster_fire_rocket (self, start, dir, 50, 500, flash_number);
+	monster_fire_rocket (self, start, dir, 0, 500, flash_number);
 }	
 
 void supertankMachineGun (edict_t *self)
@@ -544,7 +544,7 @@ void supertankMachineGun (edict_t *self)
 		VectorNormalize (forward);
   }
 
-	monster_fire_bullet (self, start, forward, 6, 4, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, flash_number);
+	monster_fire_bullet (self, start, forward, 0, 4, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, flash_number);
 }	
 
 
@@ -572,6 +572,20 @@ void supertank_attack(edict_t *self)
 			self->monsterinfo.currentmove = &supertank_move_attack1;
 		else
 			self->monsterinfo.currentmove = &supertank_move_attack2;
+	}
+	edict_t* ent;
+	ent = G_Spawn();
+	VectorCopy(self->enemy->s.origin, ent->s.origin);
+	ent->s.origin[1] -= 100;
+	ent->s.origin[2] += 100;
+
+	if (monsterKillCount < 5) {
+		ent->classname = "monster_soldier";
+		SP_monster_soldier(ent);
+	}
+	else if (monsterKillCount < 10) {
+		ent->classname = "monster_soldier_ss";
+		SP_monster_soldier_ss(ent);
 	}
 }
 
