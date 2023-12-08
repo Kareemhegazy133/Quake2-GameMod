@@ -899,6 +899,15 @@ void Cmd_PlayerList_f(edict_t *ent)
 	gi.cprintf(ent, PRINT_HIGH, "%s", text);
 }
 
+/*
+=================
+whereamiCommand
+=================
+*/
+void Cmd_WhereAmI(edict_t* ent) {
+
+	gi.cprintf(ent, PRINT_HIGH, "Player's Location: %f %f %f\n", ent->s.origin[0], ent->s.origin[1], ent->s.origin[2]);
+}
 
 /*
 =================
@@ -987,6 +996,8 @@ void ClientCommand (edict_t *ent)
 		Cmd_Wave_f (ent);
 	else if (Q_stricmp(cmd, "playerlist") == 0)
 		Cmd_PlayerList_f(ent);
+	else if (Q_stricmp(cmd, "whereami") == 0)
+		Cmd_WhereAmI(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }
