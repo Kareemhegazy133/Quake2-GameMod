@@ -358,7 +358,11 @@ void gunner_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damag
 	self->takedamage = DAMAGE_YES;
 	self->monsterinfo.currentmove = &gunner_move_death;
 
-	Drop_Item(self, FindItem("Health"));
+	Drop_Item(self, FindItemByClassname("ammo_bullets"));
+	Drop_Item(self, FindItemByClassname("ammo_shells"));
+	Drop_Item(self, FindItemByClassname("ammo_bullets"));
+	Drop_Item(self, FindItemByClassname("ammo_cells"));
+	Drop_Item(self, FindItemByClassname("ammo_grenades"));
 	monsterKillCount++;
 	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
 }

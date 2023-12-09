@@ -565,10 +565,6 @@ void flyer_die(edict_t *self, edict_t *inflictor, edict_t *attacker, int damage,
 {
 	gi.sound (self, CHAN_VOICE, sound_die, 1, ATTN_NORM, 0);
 	BecomeExplosion1(self);
-
-	Drop_Item(self, FindItemByClassname("item_power_shield"));
-	monsterKillCount++;
-	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
 }
 	
 

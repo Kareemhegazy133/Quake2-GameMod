@@ -599,8 +599,12 @@ void mutant_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damag
 		self->monsterinfo.currentmove = &mutant_move_death1;
 	else
 		self->monsterinfo.currentmove = &mutant_move_death2;
-}
 
+	Drop_Item(self, FindItemByClassname("item_bandolier"));
+	Drop_Item(self, FindItemByClassname("item_armor_body"));
+	monsterKillCount++;
+	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
+}
 
 //
 // SPAWN

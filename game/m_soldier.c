@@ -1191,7 +1191,15 @@ void soldier_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dama
 	else
 		self->monsterinfo.currentmove = &soldier_move_death6;
 
-	Drop_Item(self, FindItemByClassname("item_armor_body"));
+	if (monsterKillCount % 2 == 0) {
+		Drop_Item(self, FindItemByClassname("item_armor_body"));
+	}
+	else {
+		Drop_Item(self, FindItemByClassname("item_power_shield"));
+		Drop_Item(self, FindItemByClassname("weapon_shotgun"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+	}
+
 	monsterKillCount++;
 	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
 }

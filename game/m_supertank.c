@@ -591,12 +591,20 @@ void supertank_attack(edict_t *self)
 		SP_monster_soldier(ent);
 	}
 	else if (monsterKillCount < 10) {
-		ent->classname = "monster_flyer";
-		SP_monster_flyer(ent);
+		ent->classname = "monster_soldier_ss";
+		SP_monster_soldier_ss(ent);
 	}
 	else if (monsterKillCount < 15) {
 		ent->classname = "monster_gunner";
 		SP_monster_gunner(ent);
+	}
+	else if (monsterKillCount < 20) {
+		ent->classname = "monster_mutant";
+		SP_monster_mutant(ent);
+	}
+	else if (monsterKillCount < 25) {
+		ent->classname = "monster_infantry";
+		SP_monster_infantry(ent);
 	}
 }
 
