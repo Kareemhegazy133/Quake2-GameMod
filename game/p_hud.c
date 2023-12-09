@@ -313,6 +313,8 @@ void HelpComputer (edict_t *ent)
 	else
 		sk = "hard+";
 
+	char help1[512] = "SURVIVE FOR AS\nLONG AS YOU CAN!";
+	char help2[512] = "Kill as many monsters as you can!\nThey drop loot upon death and\nthey get increasingly difficult.";
 	// send the layout
 	Com_sprintf (string, sizeof(string),
 		"xv 32 yv 8 picn help "			// background
@@ -321,12 +323,12 @@ void HelpComputer (edict_t *ent)
 		"xv 0 yv 54 cstring2 \"%s\" "		// help 1
 		"xv 0 yv 110 cstring2 \"%s\" "		// help 2
 		"xv 50 yv 164 string2 \" kills     goals    secrets\" "
-		"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ", 
+		"xv 50 yv 172 string2 \"%3i         %i/%i       %i/%i\" ", 
 		sk,
 		level.level_name,
-		game.helpmessage1,
-		game.helpmessage2,
-		level.killed_monsters, level.total_monsters, 
+		help1,
+		help2,
+		monsterKillCount, 
 		level.found_goals, level.total_goals,
 		level.found_secrets, level.total_secrets);
 
