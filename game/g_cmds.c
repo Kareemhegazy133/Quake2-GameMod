@@ -901,12 +901,22 @@ void Cmd_PlayerList_f(edict_t *ent)
 
 /*
 =================
-whereamiCommand
+WhereAmICommand
 =================
 */
 void Cmd_WhereAmI(edict_t* ent) {
 
 	gi.cprintf(ent, PRINT_HIGH, "Player's Location: %f %f %f\n", ent->s.origin[0], ent->s.origin[1], ent->s.origin[2]);
+}
+
+/*
+=================
+HelpScreenCommand
+=================
+*/
+void Cmd_HelpScreen(edict_t* ent) {
+
+	gi.cprintf(ent, PRINT_HIGH, "\nSURVIVAL MOD HELP SCREEN:\n\nOBJECTIVE:\n\nKill as many monsters as you can! They drop loot upon death and they get increasingly difficult.\n");
 }
 
 /*
@@ -998,6 +1008,8 @@ void ClientCommand (edict_t *ent)
 		Cmd_PlayerList_f(ent);
 	else if (Q_stricmp(cmd, "whereami") == 0)
 		Cmd_WhereAmI(ent);
+	else if (Q_stricmp(cmd, "helpscreen") == 0)
+		Cmd_HelpScreen(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }

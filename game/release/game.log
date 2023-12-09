@@ -1,12 +1,20 @@
-﻿  m_supertank.c
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(452,59): warning C4100: 'kick': unreferenced formal parameter
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(452,46): warning C4100: 'other': unreferenced formal parameter
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(591,3): warning C4013: 'SP_monster_soldier' undefined; assuming extern returning int
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(595,3): warning C4013: 'SP_monster_flyer' undefined; assuming extern returning int
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(599,3): warning C4013: 'SP_monster_gunner' undefined; assuming extern returning int
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(682,94): warning C4100: 'point': unreferenced formal parameter
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(682,79): warning C4100: 'damage': unreferenced formal parameter
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(682,65): warning C4100: 'attacker': unreferenced formal parameter
-C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(682,45): warning C4100: 'inflictor': unreferenced formal parameter
+﻿  g_cmds.c
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(34,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(57,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(58,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(722,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(725,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(808,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(809,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(810,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(821,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(828,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(875,7): warning C4459: declaration of 'st' hides global declaration
+  C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_local.h(456,21):
+  see declaration of 'st'
+  
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(897,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(885,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\g_cmds.c(893,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
      Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp
   game.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 2\q2mod\gamex86.dll
