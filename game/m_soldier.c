@@ -1192,6 +1192,8 @@ void soldier_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int dama
 		self->monsterinfo.currentmove = &soldier_move_death6;
 
 	Drop_Item(self, FindItemByClassname("item_armor_body"));
+	monsterKillCount++;
+	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
 }
 
 

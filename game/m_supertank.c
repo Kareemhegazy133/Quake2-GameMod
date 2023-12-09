@@ -575,9 +575,16 @@ void supertank_attack(edict_t *self)
 	}
 	edict_t* ent;
 	ent = G_Spawn();
-	VectorCopy(self->enemy->s.origin, ent->s.origin);
-	ent->s.origin[1] -= 100;
-	ent->s.origin[2] += 100;
+	if (monsterKillCount % 2 == 0) {
+		ent->s.origin[0] = -2500;
+		ent->s.origin[1] = 1175;
+		ent->s.origin[2] = 21;
+	}
+	else {
+		ent->s.origin[0] = -2700;
+		ent->s.origin[1] = 1175;
+		ent->s.origin[2] = 21;
+	}
 
 	if (monsterKillCount < 5) {
 		ent->classname = "monster_soldier";
@@ -586,6 +593,10 @@ void supertank_attack(edict_t *self)
 	else if (monsterKillCount < 10) {
 		ent->classname = "monster_flyer";
 		SP_monster_flyer(ent);
+	}
+	else if (monsterKillCount < 15) {
+		ent->classname = "monster_gunner";
+		SP_monster_gunner(ent);
 	}
 }
 
