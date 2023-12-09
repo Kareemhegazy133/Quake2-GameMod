@@ -1,1 +1,19 @@
-﻿  game.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 2\q2mod\gamex86.dll
+﻿  m_supertank.c
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(452,59): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(452,46): warning C4100: 'other': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(596,3): warning C4013: 'SP_monster_soldier' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(604,3): warning C4013: 'SP_monster_soldier_ss' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(612,3): warning C4013: 'SP_monster_gunner' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(620,3): warning C4013: 'SP_monster_mutant' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(628,3): warning C4013: 'SP_monster_infantry' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(636,3): warning C4013: 'SP_monster_berserk' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(644,3): warning C4013: 'SP_monster_brain' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(652,3): warning C4013: 'SP_monster_chick' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(660,3): warning C4013: 'SP_monster_gladiator' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(668,3): warning C4013: 'SP_monster_parasite' undefined; assuming extern returning int
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(755,94): warning C4100: 'point': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(755,79): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(755,65): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\ktheg\OneDrive\Desktop\Quake 2 Development\Quake2-GameMod\game\m_supertank.c(755,45): warning C4100: 'inflictor': unreferenced formal parameter
+     Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp
+  game.vcxproj -> C:\Program Files (x86)\Steam\steamapps\common\Quake 2\q2mod\gamex86.dll

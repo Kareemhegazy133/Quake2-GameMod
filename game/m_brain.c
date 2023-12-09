@@ -614,6 +614,96 @@ void brain_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage
 		self->monsterinfo.currentmove = &brain_move_death1;
 	else
 		self->monsterinfo.currentmove = &brain_move_death2;
+
+	n = rand() % 20;
+	switch (n) {
+	case 0:
+		Drop_Item(self, FindItemByClassname("item_armor_body"));
+		break;
+	case 1:
+		Drop_Item(self, FindItemByClassname("item_power_shield"));
+		break;
+	case 2:
+		Drop_Item(self, FindItemByClassname("item_armor_combat"));
+		break;
+	case 3:
+		Drop_Item(self, FindItemByClassname("weapon_shotgun"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+		Drop_Item(self, FindItemByClassname("ammo_cells"));
+		Drop_Item(self, FindItemByClassname("ammo_slugs"));
+		break;
+	case 4:
+		Drop_Item(self, FindItemByClassname("item_armor_jacket"));
+		break;
+	case 5:
+		Drop_Item(self, FindItemByClassname("item_armor_shard"));
+		break;
+	case 6:
+		Drop_Item(self, FindItemByClassname("item_power_screen"));
+		break;
+	case 7:
+		Drop_Item(self, FindItemByClassname("weapon_machinegun"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		break;
+	case 8:
+		Drop_Item(self, FindItemByClassname("weapon_supershotgun"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+		Drop_Item(self, FindItemByClassname("ammo_cells"));
+		Drop_Item(self, FindItemByClassname("ammo_slugs"));
+		break;
+	case 9:
+		Drop_Item(self, FindItemByClassname("weapon_chaingun"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		Drop_Item(self, FindItemByClassname("ammo_slugs"));
+		break;
+	case 10:
+		Drop_Item(self, FindItemByClassname("item_quad"));
+		break;
+	case 11:
+		Drop_Item(self, FindItemByClassname("weapon_grenadelauncher"));
+		Drop_Item(self, FindItemByClassname("ammo_grenades"));
+		break;
+	case 12:
+		Drop_Item(self, FindItemByClassname("weapon_rocketlauncher"));
+		Drop_Item(self, FindItemByClassname("ammo_rockets"));
+		break;
+	case 13:
+		Drop_Item(self, FindItemByClassname("weapon_hyperblaster"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		break;
+	case 14:
+		Drop_Item(self, FindItemByClassname("weapon_railgun"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		break;
+	case 15:
+		Drop_Item(self, FindItemByClassname("weapon_bfg"));
+		break;
+	case 16:
+		Drop_Item(self, FindItemByClassname("item_invulnerability"));
+		Drop_Item(self, FindItemByClassname("item_pack"));
+		break;
+	case 17:
+		Drop_Item(self, FindItemByClassname("item_silencer"));
+		Drop_Item(self, FindItemByClassname("item_ancient_head"));
+		break;
+	case 18:
+		Drop_Item(self, FindItemByClassname("item_breather"));
+		Drop_Item(self, FindItemByClassname("item_adrenaline"));
+		break;
+	case 19:
+		Drop_Item(self, FindItemByClassname("item_bandolier"));
+		Drop_Item(self, FindItemByClassname("item_enviro"));
+		break;
+	default:
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		Drop_Item(self, FindItemByClassname("ammo_cells"));
+		Drop_Item(self, FindItemByClassname("ammo_grenades"));
+	}
+
+	monsterKillCount++;
+	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
 }
 
 /*QUAKED monster_brain (1 .5 0) (-16 -16 -24) (16 16 32) Ambush Trigger_Spawn Sight

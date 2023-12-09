@@ -586,25 +586,90 @@ void supertank_attack(edict_t *self)
 		ent->s.origin[2] = 21;
 	}
 
-	if (monsterKillCount < 5) {
+	switch (monsterKillCount) {
+	case 0:
+	case 1:
+	case 2:
+	case 3:
+	case 4:
 		ent->classname = "monster_soldier";
 		SP_monster_soldier(ent);
-	}
-	else if (monsterKillCount < 10) {
+		break;
+	case 5:
+	case 6:
+	case 7:
+	case 8:
+	case 9:
 		ent->classname = "monster_soldier_ss";
 		SP_monster_soldier_ss(ent);
-	}
-	else if (monsterKillCount < 15) {
+		break;
+	case 10:
+	case 11:
+	case 12:
+	case 13:
+	case 14:
 		ent->classname = "monster_gunner";
 		SP_monster_gunner(ent);
-	}
-	else if (monsterKillCount < 20) {
+		break;
+	case 15:
+	case 16:
+	case 17:
+	case 18:
+	case 19:
 		ent->classname = "monster_mutant";
 		SP_monster_mutant(ent);
-	}
-	else if (monsterKillCount < 25) {
+		break;
+	case 20:
+	case 21:
+	case 22:
+	case 23:
+	case 24:
 		ent->classname = "monster_infantry";
 		SP_monster_infantry(ent);
+		break;
+	case 25:
+	case 26:
+	case 27:
+	case 28:
+	case 29:
+		ent->classname = "monster_berserk";
+		SP_monster_berserk(ent);
+		break;
+	case 30:
+	case 31:
+	case 32:
+	case 33:
+	case 34:
+		ent->classname = "monster_brain";
+		SP_monster_brain(ent);
+		break;
+	case 35:
+	case 36:
+	case 37:
+	case 38:
+	case 39:
+		ent->classname = "monster_chick";
+		SP_monster_chick(ent);
+		break;
+	case 40:
+	case 41:
+	case 42:
+	case 43:
+	case 44:
+		ent->classname = "monster_gladiator";
+		SP_monster_gladiator(ent);
+		break;
+	case 45:
+	case 46:
+	case 47:
+	case 48:
+	case 49:
+		ent->classname = "monster_parasite";
+		SP_monster_parasite(ent);
+		break;
+	default:
+		// Handle the case where monsterKillCount is 50 or greater
+		break;
 	}
 }
 
@@ -694,6 +759,96 @@ void supertank_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int da
 	self->takedamage = DAMAGE_NO;
 	self->count = 0;
 	self->monsterinfo.currentmove = &supertank_move_death;
+
+	int n = rand() % 20;
+	switch (n) {
+	case 0:
+		Drop_Item(self, FindItemByClassname("item_armor_body"));
+		break;
+	case 1:
+		Drop_Item(self, FindItemByClassname("item_power_shield"));
+		break;
+	case 2:
+		Drop_Item(self, FindItemByClassname("item_armor_combat"));
+		break;
+	case 3:
+		Drop_Item(self, FindItemByClassname("weapon_shotgun"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+		Drop_Item(self, FindItemByClassname("ammo_cells"));
+		Drop_Item(self, FindItemByClassname("ammo_slugs"));
+		break;
+	case 4:
+		Drop_Item(self, FindItemByClassname("item_armor_jacket"));
+		break;
+	case 5:
+		Drop_Item(self, FindItemByClassname("item_armor_shard"));
+		break;
+	case 6:
+		Drop_Item(self, FindItemByClassname("item_power_screen"));
+		break;
+	case 7:
+		Drop_Item(self, FindItemByClassname("weapon_machinegun"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		break;
+	case 8:
+		Drop_Item(self, FindItemByClassname("weapon_supershotgun"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+		Drop_Item(self, FindItemByClassname("ammo_cells"));
+		Drop_Item(self, FindItemByClassname("ammo_slugs"));
+		break;
+	case 9:
+		Drop_Item(self, FindItemByClassname("weapon_chaingun"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		Drop_Item(self, FindItemByClassname("ammo_slugs"));
+		break;
+	case 10:
+		Drop_Item(self, FindItemByClassname("item_quad"));
+		break;
+	case 11:
+		Drop_Item(self, FindItemByClassname("weapon_grenadelauncher"));
+		Drop_Item(self, FindItemByClassname("ammo_grenades"));
+		break;
+	case 12:
+		Drop_Item(self, FindItemByClassname("weapon_rocketlauncher"));
+		Drop_Item(self, FindItemByClassname("ammo_rockets"));
+		break;
+	case 13:
+		Drop_Item(self, FindItemByClassname("weapon_hyperblaster"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		break;
+	case 14:
+		Drop_Item(self, FindItemByClassname("weapon_railgun"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		break;
+	case 15:
+		Drop_Item(self, FindItemByClassname("weapon_bfg"));
+		break;
+	case 16:
+		Drop_Item(self, FindItemByClassname("item_invulnerability"));
+		Drop_Item(self, FindItemByClassname("item_pack"));
+		break;
+	case 17:
+		Drop_Item(self, FindItemByClassname("item_silencer"));
+		Drop_Item(self, FindItemByClassname("item_ancient_head"));
+		break;
+	case 18:
+		Drop_Item(self, FindItemByClassname("item_breather"));
+		Drop_Item(self, FindItemByClassname("item_adrenaline"));
+		break;
+	case 19:
+		Drop_Item(self, FindItemByClassname("item_bandolier"));
+		Drop_Item(self, FindItemByClassname("item_enviro"));
+		break;
+	default:
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		Drop_Item(self, FindItemByClassname("ammo_shells"));
+		Drop_Item(self, FindItemByClassname("ammo_bullets"));
+		Drop_Item(self, FindItemByClassname("ammo_cells"));
+		Drop_Item(self, FindItemByClassname("ammo_grenades"));
+	}
+
+	monsterKillCount++;
+	gi.dprintf("MonsterKillCount: %d\n", monsterKillCount);
 }
 
 //
